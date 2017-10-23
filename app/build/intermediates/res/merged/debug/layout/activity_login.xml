@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_image"
+    tools:context="com.example.leonardo.each_os_problemas_user.Login">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/btnCadastrar"
+        android:layout_toRightOf="@+id/btnCadastrar"
+        android:background="#66FF8800"
+        android:text="Login"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNusp"
+        android:layout_alignStart="@+id/txtNusp"
+        android:layout_alignTop="@+id/txtNusp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="?attr/colorButtonNormal"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <EditText
+        android:id="@+id/txtNusp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:autofillHints="Nr. USP"
+        android:ems="10"
+        android:hint="Nr. USP"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="?attr/colorButtonNormal"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnLogin"
+        android:layout_alignBottom="@+id/btnLogin"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtPassword"
+        android:background="#66FF8800"
+        android:text="Cadastrar"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="309dp"
+        android:onClick="openStoreUserActivity"/>
+
+</RelativeLayout>

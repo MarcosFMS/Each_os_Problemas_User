@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\Marcos\\Documents\\Desenvolvimento\\AndroidStudioProjects\\Each_os_Problemas_User\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\870216a236080abe8b85460f185d96a90f005fc5\\output\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    }
+]

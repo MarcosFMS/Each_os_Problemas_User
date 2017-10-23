@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_conta"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Minha Conta" />
+        <item
+            android:id="@+id/nav_mapa"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Mapa Completo" />
+        <item
+            android:id="@+id/nav_minhas_solic"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Minhas Solicitacoes" />
+        <item
+            android:id="@+id/nav_estatisticas"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Estatisticas" />
+        <item
+            android:id="@+id/nav_busca"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Buscar" />
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Feed" />
+    </group>
+
+
+
+</menu>
