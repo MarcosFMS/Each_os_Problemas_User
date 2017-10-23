@@ -14,12 +14,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Login extends AppCompatActivity {
-
+//comment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        int a = 0;
+        Log.d("",a+"");
         Button bt_login = (Button) findViewById(R.id.btnLogin);
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
