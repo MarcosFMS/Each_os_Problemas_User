@@ -9,37 +9,17 @@
     tools:showIn="@layout/app_bar_home_page">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnReportar"
         android:layout_width="135dp"
         android:layout_height="58dp"
-        android:text="Acompanhar"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="460dp"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="56dp"
-        android:layout_marginEnd="56dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="135dp"
-        android:layout_height="58dp"
-        android:text="Reportar Prob."
+        android:text="Reportar Problema"
         tools:layout_editor_absoluteX="82dp"
         tools:layout_editor_absoluteY="460dp"
-        android:layout_marginBottom="59dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button2"
-        android:layout_toStartOf="@+id/button2"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp" />
-
-    <WebView
-        android:layout_width="380dp"
-        android:layout_height="400dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="114dp"
+        android:layout_marginStart="114dp"
+        android:onClick="reportarProblema"/>
 
 </RelativeLayout>

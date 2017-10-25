@@ -1,5 +1,6 @@
 package com.example.leonardo.each_os_problemas_user;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,6 +32,11 @@ public class HomePage extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    protected void reportarProblema(View view){
+        Intent i = new Intent(getApplicationContext(), StoreProblem.class);
+        startActivity(i);
     }
 
     @Override

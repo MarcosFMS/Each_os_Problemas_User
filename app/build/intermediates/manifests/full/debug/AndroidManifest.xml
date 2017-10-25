@@ -9,6 +9,9 @@
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -44,6 +47,7 @@
             android:name="com.example.leonardo.each_os_problemas_user.StoreUser"
             android:label="@string/title_activity_store_user"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.leonardo.each_os_problemas_user.StoreProblem" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
