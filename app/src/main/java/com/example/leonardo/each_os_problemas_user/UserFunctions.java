@@ -44,12 +44,12 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class UserFunctions {
 
-    private final String STORE_USER_TAG = "store_user", LOGIN_TAG = "login";
+    private final String STORE_USER_TAG = "store_user", LOGIN_TAG = "login", STORE_PROBLEM_TAG = "store_problem";
 
     private JSONParser jsonParser;
 
     //URL of the PHP API
-    public static final String SERVER_URL = "http://192.168.43.185/Eacheosproblemas_server/android_index.php";
+    public static final String SERVER_URL = "http://192.168.3.8/Eacheosproblemas_server/android_index.php";
     boolean check = true;
 
     // constructor
@@ -146,6 +146,23 @@ public class UserFunctions {
             postDataParams.put("email", email);
             postDataParams.put("password", password);
             postDataParams.put("nusp", nusp);
+            return sendPostDataString(postDataParams);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public String storeProblem(String nusp, String description, int type, String place, String imageTag, String imageData) {
+        JSONObject postDataParams = new JSONObject();
+        try {
+            postDataParams.put("tag", STORE_PROBLEM_TAG);
+            postDataParams.put("nusp", nusp);
+            postDataParams.put("description", description);
+            postDataParams.put("image_name", imageTag);
+            postDataParams.put("type", type);
+            postDataParams.put("place", place);
+            postDataParams.put("image_data", imageData);
             return sendPostDataString(postDataParams);
         } catch (JSONException e) {
             e.printStackTrace();

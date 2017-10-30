@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void storePreferences(String nusp, String name){
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.shared_preference_key),Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(getString(R.string.nusp_key), nusp);
         editor.putString(getString(R.string.name_key), name);
