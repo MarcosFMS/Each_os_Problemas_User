@@ -1,5 +1,7 @@
 package com.example.leonardo.each_os_problemas_user;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.util.Pair;
@@ -44,17 +46,15 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class UserFunctions {
 
-    private final String STORE_USER_TAG = "store_user", LOGIN_TAG = "login", STORE_PROBLEM_TAG = "store_problem";
-
-    private JSONParser jsonParser;
+    private final String STORE_USER_TAG = "store_user", LOGIN_TAG = "login", STORE_PROBLEM_TAG = "store_problem", GET_USER_PROBLEM_TAG="get_user_problems";
 
     //URL of the PHP API
-    public static final String SERVER_URL = "http://192.168.3.8/Eacheosproblemas_server/android_index.php";
+    public static final String SERVER_URL = "http://192.168.43.185/Eacheosproblemas_server/android_index.php";
     boolean check = true;
 
     // constructor
     public UserFunctions() {
-        jsonParser = new JSONParser();
+
     }
 
     /**
@@ -170,6 +170,18 @@ public class UserFunctions {
         }
     }
 
+    public String getUserProblems(String nusp){
+        JSONObject postDataParams = new JSONObject();
+        try {
+            postDataParams.put("tag", GET_USER_PROBLEM_TAG);
+            postDataParams.put("nusp", nusp);
+            return sendPostDataString(postDataParams);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public String login(String nusp, String password) {
 
         JSONObject postDataParams = new JSONObject();
@@ -182,6 +194,12 @@ public class UserFunctions {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String getNusp(Context context){
+            SharedPreferences sharedPref = context.getSharedPreferences(context.getString(R.string.shared_preference_key),context.MODE_PRIVATE);
+            String nusp = sharedPref.getString(context.getString(R.string.nusp_key), null);
+            return nusp;
     }
 
 }

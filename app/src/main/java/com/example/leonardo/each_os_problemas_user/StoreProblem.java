@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -69,14 +68,8 @@ public class StoreProblem extends AppCompatActivity {
         String description = ((EditText) findViewById(R.id.txtDescription)).getText().toString();
         String place = ((EditText) findViewById(R.id.txtPlace)).getText().toString();
         String type = ((EditText) findViewById(R.id.txtType)).getText().toString();
-        String nusp = getNusp();
+        String nusp = UserFunctions.getNusp(getApplicationContext());
         StoreProblemTask(photo, description, place, 1, nusp);
-    }
-
-    private String getNusp(){
-        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.shared_preference_key),MODE_PRIVATE);
-        String nusp = sharedPref.getString(getString(R.string.nusp_key), null);
-        return nusp;
     }
 
     public void StoreProblemTask(Bitmap bitmap, final String description, final String place, final int type, final String nusp) {
@@ -113,7 +106,7 @@ public class StoreProblem extends AppCompatActivity {
                     Log.d("json", json.getString("success"));
                     if(json.getInt("success") == 1){
                         Toast.makeText(getApplicationContext(), "Problema Cadastrado!", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                     }
                 } catch (JSONException e) {

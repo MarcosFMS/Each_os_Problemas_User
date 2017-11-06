@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
                 Log.d("json", json.getString("success"));
                 if(json.getInt("success") == 1){
                     storePreferences(json.getJSONObject("user").getString("nusp"), json.getJSONObject("user").getString("name"));
-                    Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Número USP ou senha incorretos!", Toast.LENGTH_SHORT);

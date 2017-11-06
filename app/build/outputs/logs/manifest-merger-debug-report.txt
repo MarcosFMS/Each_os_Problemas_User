@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:2:1-52:12
 	package
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:3:5-58
 		INJECTED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml
@@ -23,17 +23,17 @@ ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_
 	android:name
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:6:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:7:5-8:38
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:7:5-9:38
 	android:maxSdkVersion
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:9:9-35
 	android:name
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:8:9-65
 uses-feature#android.hardware.camera
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:10:5-60
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:11:5-60
 	android:name
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:10:19-57
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:11:19-57
 application
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:12:5-49:19
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:13:5-50:19
 MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\8bcee71e66cd65d19c61f6e1a3f7d114b2b384e0\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\870216a236080abe8b85460f185d96a90f005fc5\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\ab1611823d427704992285af16ffd2ed0f3a254c\output\AndroidManifest.xml:26:5-20
@@ -51,17 +51,17 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Marcos\
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\356f8d03e6573fb555c6b80d990c8073848f14a8\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\1b8fd4fe843a1811c4abc2b4b52febbcc3bfa16a\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:16:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:18:9-35
 	android:roundIcon
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:17:9-54
 	android:allowBackup
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:15:9-43
 	android:theme
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:19:9-40
 provider#android.support.v4.content.FileProvider
 ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:authorities
@@ -73,19 +73,19 @@ ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_
 	android:name
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:21:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:25:13-27:64
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:25:13-27:54
 	android:resource
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:27:17-51
 	android:name
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:26:17-67
-activity#com.example.leonardo.each_os_problemas_user.HomePage
+activity#com.example.leonardo.each_os_problemas_user.MainActivity
 ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:30:9-33:59
 	android:label
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:32:13-45
 	android:theme
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:33:13-56
 	android:name
-		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:31:13-41
 activity#com.example.leonardo.each_os_problemas_user.Login
 ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:34:9-43:20
 	android:label
@@ -113,9 +113,13 @@ ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_
 	android:name
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:45:13-38
 activity#com.example.leonardo.each_os_problemas_user.StoreProblem
-ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:48:9-59
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:48:9-50
 	android:name
 		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:48:19-47
+activity#com.example.leonardo.each_os_problemas_user.ListProblems
+ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:49:9-59
+	android:name
+		ADDED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml:49:19-47
 uses-sdk
 INJECTED from C:\Users\Marcos\Documents\Desenvolvimento\AndroidStudioProjects\Each_os_Problemas_User\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Marcos\.android\build-cache\8bcee71e66cd65d19c61f6e1a3f7d114b2b384e0\output\AndroidManifest.xml:21:5-23:62
