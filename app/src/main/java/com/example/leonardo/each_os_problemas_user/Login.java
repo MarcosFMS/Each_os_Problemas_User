@@ -1,5 +1,7 @@
 package com.example.leonardo.each_os_problemas_user;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,49 +40,48 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private class ProcessLogin extends AsyncTask<String, String, JSONObject> {
-        String Login,password;
+    private void storePreferences(String nusp, String name){
+        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.shared_preference_key),Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.nusp_key), nusp);
+        editor.putString(getString(R.string.name_key), name);
+        editor.commit();
+    }
+
+    private class ProcessLogin extends AsyncTask<String, String, String> {
+        String nusp,password;
 
         @Override
         protected void onPreExecute() {
-            EditText inputEmail = (EditText) findViewById(R.id.txtEmail);
             EditText inputPassword = (EditText) findViewById(R.id.txtPassword);
-            Login = inputEmail.getText().toString();
+            EditText inputNusp = (EditText) findViewById(R.id.txtNusp);
             password = inputPassword.getText().toString();
+            nusp= inputNusp.getText().toString();
         }
 
         @Override
-        protected JSONObject doInBackground(String... args) {
+        protected String doInBackground(String... args) {
 
             UserFunctions userFunction = new UserFunctions();
-            JSONObject json = userFunction.loginUserAluno(Login, password);
-            return json;
+            String response = userFunction.login(nusp,password);
+            return response;
         }
 
         @Override
-        protected void onPostExecute(JSONObject json) {
+        protected void onPostExecute(String response) {
+            Log.d("response", response);
             try {
-                Log.e("DATA= ",json.getString("success"));
-                if (json.getString("success").equals("1"))
-                {
-                    Log.e("DATA= ","HERE");
-                    JSONObject jsoon = json.getJSONObject("usuario");
-                    /*AlunoHome.NomeAluno= jsoon.getString("Nome");
-                    AlunoHome.TurmaAluno= jsoon.getString("Turma");
-                    AlunoHome.IdAluno=jsoon.getString("Id");*/
-                    Intent upanel = new Intent(com.example.leonardo.each_os_problemas_user.Login.this, HomePage.class);
-                    upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(upanel);
-
+                JSONObject json = new JSONObject(response);
+                Log.d("json", json.getString("success"));
+                if(json.getInt("success") == 1){
+                    storePreferences(json.getJSONObject("user").getString("nusp"), json.getJSONObject("user").getString("name"));
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Número USP ou senha incorretos!", Toast.LENGTH_SHORT);
                 }
-                else if (json.getString("error")=="0")
-                {
-
-                    Toast.makeText(getApplicationContext(), "Nome de usuario ou senha incorreta", Toast.LENGTH_LONG).show();
-
-                }
-
             } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Erro de conexão!", Toast.LENGTH_SHORT);
                 e.printStackTrace();
             }
         }

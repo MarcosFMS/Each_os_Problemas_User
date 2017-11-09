@@ -9,4 +9,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_store_user">StoreUser</string>
+    <string name="nusp_key">nusp</string>
+    <string name="name_key">name</string>
+    <string name="shared_preference_key">user_preferences</string>
+    <string name="uploaded">uploaded</string>
 </resources>

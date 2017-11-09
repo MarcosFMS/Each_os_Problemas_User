@@ -9,6 +9,12 @@
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-feature android:name="android.hardware.camera" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -26,8 +32,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.leonardo.each_os_problemas_user.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
         <activity
-            android:name="com.example.leonardo.each_os_problemas_user.HomePage"
+            android:name="com.example.leonardo.each_os_problemas_user.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -44,6 +60,8 @@
             android:name="com.example.leonardo.each_os_problemas_user.StoreUser"
             android:label="@string/title_activity_store_user"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.leonardo.each_os_problemas_user.StoreProblem" />
+        <activity android:name="com.example.leonardo.each_os_problemas_user.ListProblems" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
