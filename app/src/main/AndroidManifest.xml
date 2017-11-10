@@ -46,7 +46,6 @@
             android:label="@string/title_activity_store_user"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StoreProblem" />
-        <activity android:name=".ListProblems"></activity>
     </application>
 
 </manifest>

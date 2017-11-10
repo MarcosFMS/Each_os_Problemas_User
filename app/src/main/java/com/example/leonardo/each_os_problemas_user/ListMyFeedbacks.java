@@ -2,32 +2,40 @@ package com.example.leonardo.each_os_problemas_user;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.SimpleAdapter;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ListMyFeedbacks.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link ListMyFeedbacks#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ListMyFeedbacks extends Fragment {
+public class ListMyFeedbacks extends ListFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_NUSP = "nusp";
+    String listJson;
+    SimpleAdapter adapter;
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
+    private String nusp;
 
     public ListMyFeedbacks() {
         // Required empty public constructor
@@ -37,16 +45,14 @@ public class ListMyFeedbacks extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param nusp Parameter 1.
      * @return A new instance of fragment ListMyFeedbacks.
      */
     // TODO: Rename and change types and number of parameters
-    public static ListMyFeedbacks newInstance(String param1, String param2) {
+    public static ListMyFeedbacks newInstance(String nusp) {
         ListMyFeedbacks fragment = new ListMyFeedbacks();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_NUSP, nusp);
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,54 +61,59 @@ public class ListMyFeedbacks extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            nusp = getArguments().getString(ARG_NUSP);
+        }
+        AsyncTaskGetFeedbacksClass AsyncTaskGetFeedbacksObj = new AsyncTaskGetFeedbacksClass();
+        AsyncTaskGetFeedbacksObj.execute();
+    }
+
+    class AsyncTaskGetFeedbacksClass extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String response) {
+            getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            listJson = response;
+            Log.d("json", listJson);
+            loadList();
+            Log.d("response",response);
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            UserFunctions uf = new UserFunctions();
+            String response = uf.getUserFeedbacks(nusp);
+            return response;
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_my_feedbacks, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+    public void loadList(){
+        ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String,String>>();
+        try {
+            JSONArray feedbacksArray = new JSONArray(listJson);
+            HashMap<String, String> map = new HashMap<String, String>();
+            //FILL
+            for(int i=0;i<feedbacksArray.length();i++)
+            {
+                map=new HashMap<String, String>();
+                map.put("Description", feedbacksArray.getJSONObject(i).getString("description"));
+                data.add(map);
+            }
+            //KEYS IN MAP
+            String[] from={"Description"};
+            //IDS OF VIEWS
+            int[] to={R.id.txtDescription};
+            //ADAPTER
+            adapter=new SimpleAdapter(getActivity(), data, R.layout.fragment_list_my_problems, from, to);
+            setListAdapter(adapter);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 }

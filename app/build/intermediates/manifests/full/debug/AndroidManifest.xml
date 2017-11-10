@@ -61,7 +61,6 @@
             android:label="@string/title_activity_store_user"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.leonardo.each_os_problemas_user.StoreProblem" />
-        <activity android:name="com.example.leonardo.each_os_problemas_user.ListProblems" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

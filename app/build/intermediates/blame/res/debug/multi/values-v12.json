@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Marcos\\AndroidStudioProjects\\Each_os_Problemas_User\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
+        "outputFile": "C:\\Users\\Marcos\\Documents\\Desenvolvimento\\AndroidStudioProjects\\Each_os_Problemas_User\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 274
                 },
                 "from": {
-                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\f52c37a24e784910e3122a42b33cf4e3fb7ddeb1\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\870216a236080abe8b85460f185d96a90f005fc5\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 474
                 },
                 "from": {
-                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\f52c37a24e784910e3122a42b33cf4e3fb7ddeb1\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\870216a236080abe8b85460f185d96a90f005fc5\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -53,7 +53,7 @@
                     "endOffset": 593
                 },
                 "from": {
-                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\f52c37a24e784910e3122a42b33cf4e3fb7ddeb1\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\870216a236080abe8b85460f185d96a90f005fc5\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -72,7 +72,7 @@
                     "endOffset": 688
                 },
                 "from": {
-                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\f52c37a24e784910e3122a42b33cf4e3fb7ddeb1\\output\\res\\values-v12\\values-v12.xml",
+                    "file": "C:\\Users\\Marcos\\.android\\build-cache\\870216a236080abe8b85460f185d96a90f005fc5\\output\\res\\values-v12\\values-v12.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,

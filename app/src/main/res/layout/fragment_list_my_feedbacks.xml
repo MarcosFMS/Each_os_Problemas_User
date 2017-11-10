@@ -1,13 +1,28 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.leonardo.each_os_problemas_user.ListMyFeedbacks">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:visibility="invisible"
+        android:indeterminateTint="#1a09d6"
+        android:layout_marginTop="7dp"/>
+    />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="19dp"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</FrameLayout>
+</RelativeLayout>
